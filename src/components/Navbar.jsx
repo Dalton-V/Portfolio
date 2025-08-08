@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -36,13 +36,13 @@ export const Navbar = () => {
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex space-x-8">
-                    {navItems.map((item, key) => {
+                    {navItems.map((item, key) => (
                         <a key={key} 
                         href={item.href} 
                         className="text-foreground/80 hover:text-primary transition-colors duration-300">
                             {item.name}
                         </a>
-                    })}
+                    ))}
                 </div>
 
                 {/* Mobile Nav */}
@@ -60,7 +60,7 @@ export const Navbar = () => {
                     isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                     )}>
                     <div className="flex flex-col space-y-8 text-xl">
-                        {navItems.map((item, key) => {
+                        {navItems.map((item, key) => (
                             <a 
                             key={key} 
                             href={item.href} 
@@ -68,7 +68,7 @@ export const Navbar = () => {
                             onClick={() => setIsMenuOpen(false)}>
                                 {item.name}
                             </a>
-                        })}
+                        ))}
                     </div>
                 </div>
             </div>
