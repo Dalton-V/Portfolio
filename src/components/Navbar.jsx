@@ -23,13 +23,14 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    return <nav className={cn("fixed w-full z-40 transition-all duration-300", 
+    return (<nav 
+    className={cn("fixed w-full z-40 transition-all duration-300", 
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5")}>
 
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" href="#hero">
                     <span className="relative z-10">
-                        <span className="text-glow text-foreground"> Dalton Vislisel </span> Portfolio
+                        <span className="text-glow text-foreground"> Dalton Vislisel </span>{" "} Portfolio
                     </span>
                 </a>
 
@@ -50,7 +51,7 @@ export const Navbar = () => {
                     onClick={() => setIsMenuOpen((prev) => !prev)} 
                     className="md:hidden p-2 text-foreground z-50"
                     aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}> 
-                    {isMenuOpen ? <X size={24}/> : <Menu size={24} />} 
+                    {isMenuOpen ? <X size={24}/> : <Menu size={24} />} {" "}
                 </button>
 
                 <div className={cn(
@@ -70,7 +71,7 @@ export const Navbar = () => {
                         })}
                     </div>
                 </div>
-                
             </div>
-        </nav>;
+        </nav>
+    );
 };
