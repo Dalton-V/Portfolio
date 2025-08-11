@@ -1,4 +1,4 @@
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
     {
@@ -46,11 +46,13 @@ export const ProjectSection = () => {
                             className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
                         >
                              <div className="h-48 overflow-hidden">
-                                <img 
-                                    src={project.image} 
-                                    alt={project.title} 
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                                />
+                                <a href={project.githubUrl} target="_blank">
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title} 
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                                    />
+                                </a>
                              </div>
 
                              <div className="p-6">
@@ -67,17 +69,6 @@ export const ProjectSection = () => {
                                 <p className="text-muted-foreground text-sm mb-4"> 
                                     {project.description}
                                 </p>
-                                <div className="flex justify-between items-center">
-                                    <div className="flex space-x-3">
-                                        <a 
-                                            href={project.githubUrl} 
-                                            target="_blank"
-                                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                        >
-                                            <Github/>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         
                         </div>
