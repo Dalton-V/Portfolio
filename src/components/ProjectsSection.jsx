@@ -1,4 +1,4 @@
-import { ArrowRight, GitBranch, GitCommit, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
     {
@@ -8,7 +8,23 @@ const projects = [
         image: "/projects/neetcode-algorithms.png",
         tags: ["C#"],
         githubUrl: "https://github.com/neetcode-gh/leetcode"
-    }
+    },
+    {
+        id: 2,
+        title: "Nintendo Switch Automation",
+        description: "Contributions to an Open Source project designed to automate various interactions with a Nintendo Switch driven with image recognition controlled by Arduino.",
+        image: "/projects/nintendo-switch-automation.png",
+        tags: ["C++"],
+        githubUrl: "https://github.com/PokemonAutomation/Arduino-Source"
+    },
+    {
+        id: 3,
+        title: "Portfolio Website",
+        description: "A website designed to showcase my work and gain experience with more cloud providers.",
+        image: "/projects/portfolio.png",
+        tags: ["JavaScript"],
+        githubUrl: "https://github.com/Dalton-V/Portfolio"
+    },
 ]
 
 export const ProjectSection = () => {
@@ -58,7 +74,7 @@ export const ProjectSection = () => {
                                             target="_blank"
                                             className="text-foreground/80 hover:text-primary transition-colors duration-300"
                                         >
-                                            <GitBranch/>
+                                            <Github/>
                                         </a>
                                     </div>
                                 </div>
